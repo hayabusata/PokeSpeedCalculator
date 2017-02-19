@@ -1,0 +1,16 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<resources>
+    <string name="hello"></string>
+    <string name="app_name">PokeSpeedCalculator</string>
+
+    <string name="menu_item1">アイテム1</string>
+    <string name="menu_item2">アイテム2</string>
+    <string name="menu_item3">アイテム3</string>
+    <string name="menu_item4">アイテム4</string>
+    <string name="menu_item5">アイテム5</string>
+    <string name="menu_item6">アイテム6</string>
+    <string name="title_activity_how_to_use">HowToUseActivity</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+</resources>

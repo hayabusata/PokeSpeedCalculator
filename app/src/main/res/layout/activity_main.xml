@@ -1,0 +1,351 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.pokespeedcalculator.MainActivity">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="自分のポケモン"
+                android:id="@+id/mySideTextView"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:gravity="center_horizontal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="相手のポケモン"
+                android:id="@+id/yourSideTextView"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:gravity="center_horizontal" />
+
+            <EditText
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/myRaceEditText"
+                android:layout_alignLeft="@+id/mySideTextView"
+                android:layout_below="@+id/mySideTextView"
+                android:gravity="center_horizontal"
+                android:inputType="text|number"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="種族値"
+                android:id="@+id/raceTextView"
+                android:layout_alignTop="@+id/myRaceEditText"
+                android:layout_alignBottom="@+id/myRaceEditText"
+                android:layout_centerInParent="true"
+                android:gravity="center_vertical|center_horizontal" />
+
+            <EditText
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/yourRaceEditText"
+                android:layout_alignRight="@+id/yourSideTextView"
+                android:layout_below="@+id/yourSideTextView"
+                android:gravity="center_horizontal"
+                android:inputType="text|number"/>
+
+            <EditText
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="31"
+                android:id="@+id/myIndividual"
+                android:layout_alignLeft="@+id/myRaceEditText"
+                android:layout_below="@+id/myRaceEditText"
+                android:gravity="center_horizontal"
+                android:inputType="text|number"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="個体値"
+                android:id="@+id/individualTextView"
+                android:layout_alignTop="@id/myIndividual"
+                android:layout_alignBottom="@+id/myIndividual"
+                android:layout_centerInParent="true"
+                android:gravity="center_vertical|center_horizontal"/>
+
+            <EditText
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="31"
+                android:id="@+id/yourIndividual"
+                android:layout_alignRight="@+id/yourRaceEditText"
+                android:layout_below="@+id/yourRaceEditText"
+                android:gravity="center_horizontal"
+                android:inputType="text|number"/>
+
+            <EditText
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="50"
+                android:id="@+id/myLevelEditText"
+                android:layout_alignLeft="@+id/myIndividual"
+                android:layout_below="@+id/myIndividual"
+                android:gravity="center_horizontal"
+                android:inputType="text|number"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="lv"
+                android:id="@+id/levelTextView"
+                android:layout_alignTop="@+id/myLevelEditText"
+                android:layout_alignBottom="@+id/myLevelEditText"
+                android:layout_centerInParent="true"
+                android:gravity="center_vertical|center_horizontal"/>
+
+            <EditText
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="50"
+                android:id="@+id/yourLevelEditText"
+                android:layout_alignRight="@+id/yourIndividual"
+                android:layout_below="@+id/yourIndividual"
+                android:gravity="center_horizontal"
+                android:inputType="text|number"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="努力値"
+                android:id="@+id/effortTextView"
+                android:layout_alignTop="@+id/yourEffortEditText"
+                android:layout_alignBottom="@+id/yourEffortEditText"
+                android:layout_centerInParent="true"
+                android:gravity="center_vertical|center_horizontal"/>
+
+            <EditText
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/yourEffortEditText"
+                android:layout_alignRight="@+id/yourLevelEditText"
+                android:layout_below="@+id/yourLevelEditText"
+                android:gravity="center_horizontal"
+                android:inputType="text|number"/>
+
+            <RadioGroup
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:id="@+id/myPersonalityGroup"
+                android:layout_alignRight="@id/myLevelEditText"
+                android:layout_toLeftOf="@+id/personalityTextView"
+                android:layout_alignTop="@+id/personalityTextView"
+                >
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1.1"
+                    android:id="@+id/myPersonalityUp"
+                    android:layout_gravity="right" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1.0"
+                    android:id="@+id/myPersonalityNot"
+                    android:checked="true"
+                    android:layout_gravity="right"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0.9"
+                    android:id="@+id/myPersonalityDown"
+                    android:layout_gravity="right"/>
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="性格"
+                android:id="@+id/personalityTextView"
+                android:layout_below="@id/levelTextView"
+                android:layout_alignTop="@+id/yourPersonalityGroup"
+                android:layout_alignBottom="@+id/yourPersonalityGroup"
+                android:layout_centerInParent="true"
+                android:gravity="center_vertical|center_horizontal" />
+
+            <RadioGroup
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:id="@+id/yourPersonalityGroup"
+                android:layout_alignRight="@+id/yourEffortEditText"
+                android:layout_below="@+id/yourEffortEditText"
+                >
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1.1"
+                    android:id="@+id/yourPersonalityUp" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1.0"
+                    android:id="@+id/yourPersonalityNot"
+                    android:checked="true"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0.9"
+                    android:id="@+id/yourPersonalityDown" />
+            </RadioGroup>
+
+            <EditText
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:id="@+id/myRankEditText"
+                android:layout_below="@+id/myPersonalityGroup"
+                android:layout_alignLeft="@+id/myPersonalityGroup"
+                android:gravity="center_horizontal"
+                android:inputType="text|number"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ランク補正"
+                android:id="@+id/rankTextView"
+                android:layout_below="@+id/personalityTextView"
+                android:layout_alignTop="@+id/myRankEditText"
+                android:layout_alignBottom="@+id/myRankEditText"
+                android:layout_centerInParent="true"
+                android:gravity="center_vertical|center_horizontal"/>
+
+            <EditText
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:id="@+id/yourRankEditText"
+                android:layout_below="@+id/yourPersonalityGroup"
+                android:layout_alignRight="@+id/yourPersonalityGroup"
+                android:gravity="center_horizontal"
+                android:inputType="text|number"/>
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/myScarf"
+                android:layout_below="@+id/myRankEditText"
+                android:layout_alignRight="@+id/myRankEditText"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="スカーフ"
+                android:id="@+id/scarfTextView"
+                android:layout_below="@+id/rankTextView"
+                android:layout_alignTop="@+id/myScarf"
+                android:layout_alignBottom="@+id/myScarf"
+                android:layout_centerInParent="true"
+                android:gravity="clip_horizontal|center_horizontal"/>
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/yourScarf"
+                android:layout_below="@+id/yourRankEditText"
+                android:layout_alignLeft="@+id/yourRankEditText"/>
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/myWind"
+                android:layout_below="@+id/myScarf"
+                android:layout_alignLeft="@+id/myScarf"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="おいかぜ"
+                android:id="@+id/windTextView"
+                android:layout_below="@+id/scarfTextView"
+                android:layout_alignTop="@+id/myWind"
+                android:layout_alignBottom="@+id/myWind"
+                android:layout_centerInParent="true"
+                android:gravity="clip_horizontal|center_horizontal"/>
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/yourWind"
+                android:layout_below="@+id/yourScarf"
+                android:layout_alignRight="@+id/yourScarf"/>
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/myGypsum"
+                android:layout_below="@+id/myWind"
+                android:layout_alignLeft="@+id/myWind"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ギプス"
+                android:id="@+id/gypsumTextView"
+                android:layout_below="@+id/windTextView"
+                android:layout_alignTop="@+id/myGypsum"
+                android:layout_alignBottom="@+id/myGypsum"
+                android:layout_centerInParent="true"
+                android:gravity="clip_horizontal|center_horizontal"/>
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/yourGypsum"
+                android:layout_below="@+id/yourWind"
+                android:layout_alignRight="@+id/yourWind"/>
+
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="計算"
+                android:id="@+id/calculateButton"
+                android:layout_below="@+id/myGypsum"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="20dp" />
+
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="消去"
+                android:id="@+id/deleteButton"
+                android:layout_below="@+id/yourGypsum"
+                android:layout_alignRight="@+id/yourRankEditText"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="20dp" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+</RelativeLayout>
